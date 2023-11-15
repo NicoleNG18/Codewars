@@ -8,9 +8,6 @@ import java.util.Map;
 //What if the string is empty? Then the result should be empty object literal, {}.
 
 public class CountCharactersInString {
-    public static void main(String[] args) {
-        count("abbav");
-    }
 
     public static Map<Character, Integer> count(String str) {
         Map<Character, Integer> charactersCount = new LinkedHashMap<>();
