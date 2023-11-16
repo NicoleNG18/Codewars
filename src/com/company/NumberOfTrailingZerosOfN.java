@@ -14,7 +14,6 @@ package com.company;
 //
 //        zeros(12) = 2
 //        # 12! = 479001600 --> 2 trailing zeros
-//        Hint: You're not meant to calculate the factorial. Find another way to find the number of zeros.
 
 public class NumberOfTrailingZerosOfN {
         public static int zeros(int n) {
