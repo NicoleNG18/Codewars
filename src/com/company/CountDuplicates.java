@@ -1,4 +1,6 @@
 package com.company;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 
 //Write a function that will return the count of distinct case-insensitive alphabetic characters
@@ -15,4 +17,20 @@ package com.company;
 //        "ABBA" -> 2 # 'A' and 'B' each occur twice
 
 public class CountDuplicates {
-}
+        public static int duplicateCount(String text) {
+            text=text.toLowerCase();
+            Map<Character,Integer> characters=new LinkedHashMap<>();
+            for(int i=0;i<text.length();i++){
+                characters.putIfAbsent(text.charAt(i),0);
+                characters.put(text.charAt(i),characters.get(text.charAt(i)) + 1);
+            }
+            int count=0;
+            for (Map.Entry<Character, Integer> entry : characters.entrySet()) {
+                if(entry.getValue()>1){
+                    count++;
+                }
+            }
+            return count;
+        }
+    }
+
